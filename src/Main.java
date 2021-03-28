@@ -23,11 +23,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
+        String[] lines = new String[n];
+
         for (int i = 0; i < n; i++) {
             String line = br.readLine();
-            String[] result = solve(line);
+            lines[i] = line;
+        }
 
-            System.out.print(result[0] + " " + result[1]);
+        for (int i = 0; i < n; i++) {
+            String[] result = solve(lines[i]);
+
+            System.out.println(result[0] + " " + result[1]);
         }
     }
 
